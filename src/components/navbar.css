@@ -1,0 +1,25 @@
+.nl {
+  color: #1f3f66 !important;
+  position: relative;
+}
+
+.nl::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 8px;
+  left: 10%;
+  width: 80%;
+  height: 3px;
+  background-color: #1f3f66;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nl:hover::before {
+  transform: scaleX(1);
+}
+
+.nl.active {
+  font-weight: bold;
+}
