@@ -1,14 +1,15 @@
 import "./navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container fluid">
         {/* <!-- Brand -->   */}
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           <img src="img/Logo/blue-logo.svg" width="100px" alt="Logo Bookland" />
-        </a>
+        </Link>
 
         {/* <!-- Botón del menú responsive --> */}
         <button
@@ -27,33 +28,33 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="menu">
           <ul className="ul-gap navbar-nav mb-2 mb-lg-0 justify-content-center align-items-center w-100">
             <li className="nav-item">
-              <a className="nav-link nl active" href="/">
+              <Link className="nav-link nl active" to="/">
                 Inicio
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link nl" href="/libros.html">
+              <Link className="nav-link nl" to="/libros">
                 Libros
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link nl" href="/autores.html">
+              <Link className="nav-link nl" to="/autores">
                 Autores
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link nl" href="/contacto.html">
+              <Link className="nav-link nl" to="/contacto">
                 Contacto
-              </a>
+              </Link>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link nl" href="/blog.html">
+              <Link className="nav-link nl" to="/blog">
                 Blog
-              </a>
+              </Link>
             </li>
           </ul>
           <CartWidget />
