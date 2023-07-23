@@ -5,7 +5,7 @@ function CartWidget(props) {
     <a href="/carrito.html" id="carrito">
       <div className="d-flex">
         <img
-          src="img/Iconos/carrito.svg"
+          src="/img/Iconos/carrito.svg"
           width="24px"
           alt="Carrito de compra"
         />
