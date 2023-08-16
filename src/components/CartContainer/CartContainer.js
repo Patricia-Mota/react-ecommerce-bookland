@@ -31,6 +31,7 @@ function CartContainer() {
       MySwal.fire({
         title: <p>Gracias por tu compra, tu numero de orden es {idOrder}</p>,
         icon: "success",
+        confirmButtonText: "Ir al detalle de la orden",
       }).then(() => {
         navigate(`/order-confirmation/${idOrder}`);
       });
