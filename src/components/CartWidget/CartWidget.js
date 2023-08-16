@@ -1,17 +1,22 @@
 import "./cartwidget.css";
+import { useContext } from "react";
+import { cartContext } from "../../context/cartContext";
+import { Link } from "react-router-dom";
 
 function CartWidget(props) {
+  const { getTotalItemsInCart } = useContext(cartContext);
+  const totalItems = getTotalItemsInCart();
   return (
-    <a href="/carrito.html" id="carrito">
+    <Link to="/cart" id="carrito">
       <div className="d-flex">
         <img
           src="/img/Iconos/carrito.svg"
           width="24px"
           alt="Carrito de compra"
         />
-        <span id="total-carrito">0</span>
+        <span id="total-carrito">{totalItems}</span>
       </div>
-    </a>
+    </Link>
   );
 }
 
